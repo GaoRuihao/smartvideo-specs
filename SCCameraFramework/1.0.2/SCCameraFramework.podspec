@@ -8,9 +8,7 @@ Pod::Spec.new do |spec|
   spec.license      = "MIT"
   spec.author             = { "xisuo" => "xiaoxisuo@gmail.com" }
   spec.platform     = :ios, "11.0"
-  spec.source       = { 
-    "http": "https://cdn.jsdelivr.net/gh/GaoRuihao/resource/SCCameraFramework.zip"
-  }
+  spec.source       = { :git => "https://github.com/GaoRuihao/CameraSDK.git", :tag => "#{spec.version}" }
 
  spec.dependency 'SVProgressHUD'
  spec.dependency 'Masonry'
@@ -57,10 +55,10 @@ spec.prefix_header_file = 'SCCameraFramework/Common/LMCAPrefixHeader.pch'
 #    spec.exclude_files = 'SCCameraFramework/**/*{.a}'
     #spec.exclude_files  = 'SCCameraFramework/Camera/Lock/Camera/Manager/WebRTC/libLMWebRTCStaticLib.a'
   else
-    spec.vendored_frameworks = 'SCCameraFramework.framework'
+    spec.vendored_frameworks = 'CameraP2PSDK.framework','SourceSDK/SCCameraFramework.framework'
   end
 
-  # spec.resource =  'SCCameraFramework/SCCameraFramework.bundle'
+  spec.resource =  'SCCameraFramework/SCCameraFramework.bundle'
 
   spec.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'YES'}
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'armv7 arm64' }
