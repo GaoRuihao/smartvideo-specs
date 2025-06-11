@@ -17,24 +17,14 @@ Pod::Spec.new do |spec|
   spec.author             = { "xisuo" => "xiaoxisuo@gmail.com" }
 
   spec.platform     = :ios, "13.0"
-  spec.source       = { 
-    "http": "https://cdn.jsdelivr.net/gh/GaoRuihao/resource/CameraP2PSDK.zip"
-  }
+  spec.source       = { :http => "https://github.com/GaoRuihao/resource/releases/download/1.0.0/CameraP2PSDK-1.0.1.zip" }
 
   spec.dependency 'YYModel'
   spec.frameworks = 'Foundation','UIKit'
 
-  if ENV['debug']
-    spec.header_dir = "CameraP2PSDK"
-    spec.source_files = 'CameraP2PSDK/**/*{h,m}'
-    spec.vendored_libraries = 'CameraP2PSDK/**/*.a'
-  else
-    spec.vendored_frameworks = "*.framework"
-  end
+  spec.vendored_frameworks = "CameraP2PSDK.framework"
 
-  spec.pod_target_xcconfig = {
-    'ENABLE_BITCODE' => 'YES',
-    'VALID_ARCHS' => 'armv7 arm64'
-  }
+  spec.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'YES' }
+  spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'armv7 arm64' }
 
 end
