@@ -7,26 +7,16 @@ Pod::Spec.new do |spec|
   spec.license      = "MIT"
   spec.author             = { "xisuo" => "xiaoxisuo@gmail.com" }
   spec.platform     = :ios, "13.0"
-  spec.source       = { 
-    "http": "https://cdn.jsdelivr.net/gh/GaoRuihao/resource/SDMQTT.zip"
-  }
+  spec.source       = { :http => "https://github.com/GaoRuihao/resource/releases/download/1.0.0/SDMQTT-1.0.2.zip" }
 
-  spec.dependency 'AFNetworking','3.2.0'
+  spec.dependency 'AFNetworking'
   spec.dependency 'SVProgressHUD'
   spec.dependency 'MQTTClient'
   spec.frameworks = 'Foundation','UIKit'
 
-  if ENV['debug']
-    spec.header_dir = "SDMQTT"
-    spec.source_files = 'SDMQTT/**/*{h,m}'
-    spec.vendored_libraries = 'SDMQTT/**/*.a'
-  else
-    spec.vendored_frameworks = "*.framework"
-  end
+  spec.vendored_frameworks = "SDMQTT.framework"
 
-  spec.pod_target_xcconfig = {
-    'ENABLE_BITCODE' => 'YES',
-    'VALID_ARCHS' => 'armv7 arm64'
-  }
+  spec.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'YES' }
+  spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'armv7 arm64' }
 
 end
