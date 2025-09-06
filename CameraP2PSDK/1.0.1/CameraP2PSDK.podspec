@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.author             = { "xisuo" => "xiaoxisuo@gmail.com" }
 
   spec.platform     = :ios, "13.0"
-  spec.source       = { :http => "https://github.com/GaoRuihao/resource/releases/download/1.0.0/CameraP2PSDK-1.0.1.zip" }
+  spec.source       = { :http => "https://github.com/GaoRuihao/resource/releases/download/1.0.4/CameraP2PSDK-1.0.2.zip" }
 
   spec.dependency 'YYModel'
   spec.frameworks = 'Foundation','UIKit'
