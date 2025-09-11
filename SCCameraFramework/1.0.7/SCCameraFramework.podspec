@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.license      = "MIT"
   spec.author       = { "xisuo" => "xiaoxisuo@gmail.com" }
   spec.platform     = :ios, "11.0"
-  spec.source       = { :http => "https://github.com/GaoRuihao/resource/releases/download/1.0.4/SCCameraFramework-1.0.7.zip" }
+  spec.source       = { :http => "https://github.com/GaoRuihao/resource/releases/download/1.0.5/SCCameraFramework-1.0.8.zip" }
 
  spec.dependency 'SVProgressHUD'
  spec.dependency 'Masonry'
